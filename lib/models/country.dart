@@ -4,6 +4,7 @@ import './timezone.dart';
 class Country {
   final String name;
   final String isoCode;
+  final String isoCode3;
   final String phoneCode;
   final String flag;
   final String currency;
@@ -14,6 +15,7 @@ class Country {
   Country({
     required this.name,
     required this.isoCode,
+    required this.isoCode3,
     required this.phoneCode,
     required this.flag,
     required this.currency,
@@ -25,6 +27,7 @@ class Country {
   static Country fromJson(Map<String, dynamic> json) => Country(
         name: json['name'],
         isoCode: json['isoCode'],
+        isoCode3: json['isoCode3'],
         phoneCode: json['phoneCode'],
         currency: json['currency'],
         flag: json['flag'],
@@ -35,6 +38,7 @@ class Country {
   Map<String, dynamic> toJson() => {
         'name': name,
         'isoCode': isoCode,
+        'isoCode3': isoCode3,
         'phoneCode': phoneCode,
         'currency': currency,
         'flag': flag,
